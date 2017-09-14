@@ -29,9 +29,9 @@
 #
 ##################################################################################################
 
-MYSQL_PASS='RooT!23$%5'					; export MYSQL_PASS
-USER_NAME="root"						; export USER_NAME
-OS=`uname`								; export OS
+MYSQL_PASS='RooT!23$%5'					: export MYSQL_PASS
+USER_NAME="root"						: export USER_NAME
+OS=`uname`								: export OS
 
 # INSTALL lAMP stack
 
@@ -124,6 +124,6 @@ cp ~/wordpress/wp-config-sample.php ~/wordpress/wp-config.php
 sed -i -e "s/username_here/$wp_admin/g; s/database_name_here/$wp_db/g; s/password_here/$wp_pass/g" wordpress/wp-config.php
 
 #Copy the Files
-sudo cp -r ~/wordpress/* /var/www/html
+cp -r ~/wordpress/* /var/www/html
 
-sudo service httpd restart
+service httpd restart
